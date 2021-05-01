@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Post from "../../Components/Post/Post";
 import axios from "axios";
 
 const HomePage = () => {
@@ -23,7 +24,11 @@ const HomePage = () => {
       .catch((error) => console.error(`Error: ${error}`));
   };
 
-  return <div>Posts</div>;
+  return (
+    <div>
+      <Post className="Posts" posts={posts} />
+    </div>
+  );
 };
 
 export default HomePage;
