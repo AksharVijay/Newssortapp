@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Posts from "../../Components/Posts/Posts";
 import axios from "axios";
 import { Fragment } from "react";
@@ -27,6 +27,12 @@ const Home = () => {
       .catch((error) => console.error(`Error: ${error}`));
   };
 
+  // const sortedPosts = useMemo(() => { //<---- Uncomment this for the use of useMemo
+  //   return sortBy === "none"
+  //     ? posts
+  //     : posts.sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
+  // }, [sortBy]);
+
   return (
     <Fragment>
       <div className="home">
@@ -52,6 +58,9 @@ const Home = () => {
           }
           key={posts.title}
         />
+        {/* <Posts className="Posts" posts={sortedPosts} key={posts.title} /> 
+         //Uncomment this for the use of useMemo and comment the above <Posts/> component 
+        */}
       </div>
     </Fragment>
   );
