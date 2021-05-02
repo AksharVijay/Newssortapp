@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Post from "../../Components/Post/Post";
+import Posts from "../../Components/Posts/Posts";
 import axios from "axios";
 
-const HomePage = () => {
+const Home = () => {
   const [posts, setPosts] = useState("");
 
   let config = { Authorization: "3055f8f90fa44bbe8bda05385a20690a" };
@@ -26,9 +26,9 @@ const HomePage = () => {
 
   return (
     <div>
-      <Post className="Posts" posts={posts} />
+      <Posts className="Posts" posts={posts} />
     </div>
   );
 };
 
-export default HomePage;
+export default Home;

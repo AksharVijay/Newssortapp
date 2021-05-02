@@ -1,5 +1,5 @@
 import React from "react";
-import "./Post.css";
+import "./Posts.css";
 import { Fragment } from "react";
 
 const Post = (props) => {
